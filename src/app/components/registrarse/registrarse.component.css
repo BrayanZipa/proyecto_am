@@ -1,0 +1,14 @@
+form{
+    margin: 25%;
+    padding: 10px;
+    border-radius:10px;
+    background-color: rgba(250, 250, 250, 0.384);
+    border-color: black;
+ }
+div[class="mb-3"]{
+    border: 2px border solid ;
+    margin: 1%;
+}
+button{
+    margin: 4px;
+}
