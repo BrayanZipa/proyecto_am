@@ -8,8 +8,10 @@ import { IngresarComponent } from './components/ingresar/ingresar.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 import { CreditosComponent } from './components/creditos/creditos.component';
 import { MenuComponent } from './components/compartidos/menu/menu.component';
-
-
+import { MenuAdministradorComponent } from './components/compartidos/menu-administrador/menu-administrador.component';
+import { RegistrarComponent } from './components/vistaAdministrador/registrar/registrar.component';
+import { ModificarComponent } from './components/vistaAdministrador/modificar/modificar.component';
+import { EliminarComponent } from './components/vistaAdministrador/eliminar/eliminar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,11 @@ import { MenuComponent } from './components/compartidos/menu/menu.component';
     IngresarComponent,
     RegistrarseComponent,
     CreditosComponent,
-    MenuComponent
+    MenuComponent,
+    MenuAdministradorComponent,
+    RegistrarComponent,
+    ModificarComponent,
+    EliminarComponent,
   ],
   imports: [
     BrowserModule,
