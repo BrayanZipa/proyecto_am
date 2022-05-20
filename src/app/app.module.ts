@@ -13,6 +13,13 @@ import { RegistrarComponent } from './components/vistaAdministrador/registrar/re
 import { ModificarComponent } from './components/vistaAdministrador/modificar/modificar.component';
 import { EliminarComponent } from './components/vistaAdministrador/eliminar/eliminar.component';
 
+
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,11 @@ import { EliminarComponent } from './components/vistaAdministrador/eliminar/elim
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

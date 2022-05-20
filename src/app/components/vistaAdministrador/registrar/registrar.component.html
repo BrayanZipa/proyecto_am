@@ -7,102 +7,104 @@
   <div class="title">
     <label>Registro</label>
   </div>
-
-  <div class="row">
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Nombres</label>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Apellidos</label>
-      </div>
-    </div>
-  </div>
   
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Sexo</label><br>
-        <select class="form-select" aria-label="Default select example" name="" id="Tipo sexo" required>
-          <option disabled selected>Selecciona una opcion</option>
-          <option value="F">Femenino.</option>
-          <option value="M">Masculino</option>
-          <option value="N">No identifica</option>
-        </select>
+  <form [formGroup]="formularioadmin" (ngSubmit)="enviardatos()">
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="nombres" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Nombres</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="apellidos" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Apellidos</label>
+        </div>
       </div>
     </div>
-    <div class="col">
+    
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Sexo</label><br>
+          <select class="form-select" formControlName="sexo" aria-label="Default select example" name="" id="Tipo sexo" required>
+            <option disabled selected>Selecciona una opcion</option>
+            <option value="F">Femenino.</option>
+            <option value="M">Masculino</option>
+            <option value="N">No identifica</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">tipo de documento</label><br>
+          <select class="form-select" formControlName="tipoDocumento" aria-label="Default select example" name="" id="Tipo documento">
+            <option disabled selected required>Selecciona una opcion</option>
+            <option value="C.C.">C.C.</option>
+            <option value="T.I.">T.I.</option>
+          </select>
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="edad" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Edad</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="numeroDocumento" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Numero de documento</label>
+        </div>
+      </div>  
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="direccion" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Direccion</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="telefono" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Telefono</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="correo" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Correo electronico</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="carrera" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Carrera</label>
+        </div>
+      </div>
+    </div>
+
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">tipo de documento</label><br>
-        <select class="form-select" aria-label="Default select example" name="" id="Tipo documento">
+        <label for="exampleInputPassword1" class="form-label">Jornada</label><br>
+        <select class="form-select" formControlName="jornada" aria-label="Default select example" name="Jornada">
           <option disabled selected required>Selecciona una opcion</option>
-          <option value="C.C.">C.C.</option>
-          <option value="T.I.">T.I.</option>
+          <option value="Diurna">Diurna</option>
+          <option value="Nocturna">Nocturna</option>
         </select>
-        <div id="emailHelp" class="form-text"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Edad</label>
-      </div>
+    <div class="mb-3 text-center">
+      <button type="submit" class="btn btn-primary">Siguiente</button>
     </div>
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Numero de documento</label>
-      </div>
-    </div>  
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Direccion</label>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Telefono</label>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Correo electronico</label>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Carrera</label>
-      </div>
-    </div>
-  </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Jornada</label><br>
-      <select class="form-select" aria-label="Default select example" name="Jornada">
-        <option disabled selected required>Selecciona una opcion</option>
-        <option value="Diurna">Diurna</option>
-        <option value="Nocturna">Nocturna</option>
-      </select>
-    </div>
-
-  <div class="mb-3 text-center">
-    <button type="submit" class="btn btn-primary">Siguiente</button>
-  </div>
+  </form>
 </div>
