@@ -1,14 +1,25 @@
-form{
-    margin: 25%;
-    padding: 10px;
-    border-radius:10px;
-    background-color: rgba(250, 250, 250, 0.384);
-    border-color: black;
- }
+div.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 30px;
+    width: 55%;
+    border-radius: 10px;
+    border: 1px solid rgba(95, 95, 95, 0.212);
+}
+div.title{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
 div[class="mb-3"]{
     border: 2px border solid ;
     margin: 1%;
 }
 button{
     margin: 4px;
+}
+img{
+    height: 100px;
+    width: auto;
 }

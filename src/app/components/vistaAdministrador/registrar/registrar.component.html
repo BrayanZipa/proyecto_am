@@ -1,65 +1,108 @@
 <app-menu-administrador></app-menu-administrador>
 
-<form class="border solid">
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Nombres</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+<div class="container boder-solid">
+  <div class="logo text-center">
+      <img src="https://www.kawak.com.co/uniagustiniana/images/datos_empresa/Logo_320_x_132-02.png" alt="">
+  </div>
+  <div class="title">
+    <label>Registro</label>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Nombres</label>
+      </div>
     </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" required>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Apellidos</label>
       </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Edad</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Sexo</label><br>
-        <select name="" id="Tipo sexo" required>
-            <option disabled selected>Selecciona una opcion</option>
-            <option value="F">Femenino.</option>
-            <option value="M">Masculino</option>
-            <option value="N">No identifica</option>
+        <select class="form-select" aria-label="Default select example" name="" id="Tipo sexo" required>
+          <option disabled selected>Selecciona una opcion</option>
+          <option value="F">Femenino.</option>
+          <option value="M">Masculino</option>
+          <option value="N">No identifica</option>
         </select>
       </div>
+    </div>
+    <div class="col">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">tipo de documento</label><br>
-            <select name="" id="Tipo documento">
-                <option disabled selected required>Selecciona una opcion</option>
-                <option value="C.C.">C.C.</option>
-                <option value="T.I.">T.I.</option>
-            </select>
-            <div id="emailHelp" class="form-text"></div>
-       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Numero de documento</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" required>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Direccion</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Telefono</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" required>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Carrera</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" required>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Jornada</label><br>
-        <select name="Jornada">
-            <option disabled selected required>Selecciona una opcion</option>
-            <option value="Diurna">Diurna</option>
-            <option value="Nocturna">Nocturna</option>
+        <select class="form-select" aria-label="Default select example" name="" id="Tipo documento">
+          <option disabled selected required>Selecciona una opcion</option>
+          <option value="C.C.">C.C.</option>
+          <option value="T.I.">T.I.</option>
         </select>
+        <div id="emailHelp" class="form-text"></div>
       </div>
-      <div class="mb-3 text-center">
-        <button type="submit" class="btn btn-primary">Registrarse</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Edad</label>
       </div>
-</form> 
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Numero de documento</label>
+      </div>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Direccion</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Telefono</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Correo electronico</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Carrera</label>
+      </div>
+    </div>
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Jornada</label><br>
+      <select class="form-select" aria-label="Default select example" name="Jornada">
+        <option disabled selected required>Selecciona una opcion</option>
+        <option value="Diurna">Diurna</option>
+        <option value="Nocturna">Nocturna</option>
+      </select>
+    </div>
+
+  <div class="mb-3 text-center">
+    <button type="submit" class="btn btn-primary">Siguiente</button>
+  </div>
+</div>
