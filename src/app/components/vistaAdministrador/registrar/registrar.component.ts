@@ -38,7 +38,7 @@ export class RegistrarComponent implements OnInit {
   enviardatos():any{
     console.log("Me presionaste");
     console.log(this.formularioadmin.value);
-    this.crudService.agregarEstudiante(this.formularioadmin.value).subscribe();
+    this.crudService.Registrar(this.formularioadmin.value).subscribe();
   }
 
 }
