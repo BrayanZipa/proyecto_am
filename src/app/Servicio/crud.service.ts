@@ -8,7 +8,6 @@ import {Admin} from './Admin';
   providedIn: 'root'
 })
 export class CrudService {
-  // API: string='http://localhost/AngularPF/'
   API: string='http://localhost/desarrolloWeb/angular/'
   constructor(private clienteHttp: HttpClient) { 
   }  
