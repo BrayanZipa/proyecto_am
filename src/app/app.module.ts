@@ -11,12 +11,10 @@ import { MenuComponent } from './components/compartidos/menu/menu.component';
 import { MenuAdministradorComponent } from './components/compartidos/menu-administrador/menu-administrador.component';
 import { RegistrarComponent } from './components/vistaAdministrador/registrar/registrar.component';
 import { ModificarComponent } from './components/vistaAdministrador/modificar/modificar.component';
-import { EliminarComponent } from './components/vistaAdministrador/eliminar/eliminar.component';
-
-
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ActualizarComponent } from './components/vistaAdministrador/actualizar/actualizar.component';
 
 
 
@@ -31,7 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
     MenuAdministradorComponent,
     RegistrarComponent,
     ModificarComponent,
-    EliminarComponent,
+    ActualizarComponent,
   ],
   imports: [
     BrowserModule,

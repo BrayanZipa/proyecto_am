@@ -8,12 +8,15 @@ import {Admin} from './Admin';
   providedIn: 'root'
 })
 export class CrudService {
-  // API: string='http://localhost/AngularPF/'
-  API: string='http://localhost/desarrolloWeb/angular/'
+  API: string='http://localhost:80/desarrolloWeb/angular/'
   constructor(private clienteHttp: HttpClient) { 
   }  
 
   Registrar(datosEstudiante:Admin):Observable<any> {
     return this.clienteHttp.post(this.API+"?insertar=1",datosEstudiante);
+  }
+
+  MostrarEstudiantes(){
+    return this.clienteHttp.get(this.API);
   }
 }
