@@ -17,7 +17,7 @@ export class RegistrarComponent implements OnInit {
     ) {
 
     this.formularioadmin = this.formulario.group({
-      nombres:[''],
+      nombre:[''],
       apellidos:[''],
       sexo:[''],
       tipoDocumento:[''],
@@ -36,7 +36,6 @@ export class RegistrarComponent implements OnInit {
   }
   
   enviardatos():any{
-    console.log("Me presionaste");
     console.log(this.formularioadmin.value);
     this.crudService.Registrar(this.formularioadmin.value).subscribe();
   }

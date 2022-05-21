@@ -1,6 +1,6 @@
 export class Admin{
     id!: string;
-    nombres!: string;
+    nombre!: string;
     apellidos!: string;
     sexo!: string;
     tipoDocumento!: string;
