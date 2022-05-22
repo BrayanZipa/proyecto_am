@@ -16,7 +16,7 @@ export class RegistrarComponent implements OnInit {
   constructor(
     public formulario:FormBuilder,
     private crudService:CrudService,
-    private ruteador:Router
+    private ruteador:Router,
     ) {
 
     this.formularioadmin = this.formulario.group({

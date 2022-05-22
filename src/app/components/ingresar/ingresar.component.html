@@ -5,17 +5,19 @@
     <img src="https://www.kawak.com.co/uniagustiniana/images/datos_empresa/Logo_320_x_132-02.png" alt="">
   </div>
   <div class="title">
-    <h5>Iniciar sesión</h5>
+    <h5>Iniciar sesión como administrador</h5>
   </div>
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-    <label for="floatingInput">Correo electrónico</label>
-  </div>
-  <div class="form-floating mb-3">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-    <label for="floatingPassword">Contraseña</label>
-  </div>
-  <div class="mb-3 text-center">
-    <a class="btn btn-primary" [routerLink]="['/admin/ingresar']">Siguiente</a>
-  </div>
+ <form ngNativeValidate [formGroup]="formIngresoAdmin" (ngSubmit)="inicioSesion()">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" formControlName="correo" placeholder="Correo electrónico" required="">
+      <label for="floatingInput">Correo electrónico</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" formControlName="clave" placeholder="Contraseña" required="">
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+    <div class="mb-3 text-center">
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+    </div>
+ </form>
 </div>

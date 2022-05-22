@@ -18,12 +18,10 @@ export class RegistrarseComponent implements OnInit {
     private crudService:CrudService,
     private ruteador:Router
   ) {
-
     this.formIngresoEstudiante = this.formulario.group({
       numeroDocumento:[''],
       correo:['']
     })
-
    }
 
   ngOnInit(): void {

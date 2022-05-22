@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{CrudService} from 'src/app/Servicio/crud.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-consultar',
@@ -17,7 +17,7 @@ export class ConsultarComponent implements OnInit {
     private crudService:CrudService
   ) {
     
-   }
+  }
 
   ngOnInit(): void {
     this.id = this.activateRoute.snapshot.paramMap.get('id');

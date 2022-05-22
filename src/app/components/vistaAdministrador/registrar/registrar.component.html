@@ -1,15 +1,16 @@
 <app-menu-administrador></app-menu-administrador>
 
-
   <div class="logo">
     <img src="https://www.kawak.com.co/uniagustiniana/images/datos_empresa/Logo_320_x_132-02.png" alt="">
   </div>
-  <div class="title">
-      <h5 class="card-title text-center">Registro de estudiante</h5>
-    </div>
-<div class="container boder-solid">
-    
-  <form ngNativeValidate [formGroup]="formularioadmin" (ngSubmit)="enviardatos()">
+
+<div class="container boder-solid mt-3">
+
+  <div class="title mb-3" style="margin-top: -20px;">
+    <h5 style="font-size: 25px;" >Registro de estudiante</h5>
+  </div>
+
+  <form style="margin-bottom: -40px;" ngNativeValidate [formGroup]="formularioadmin" (ngSubmit)="enviardatos()">
 
     <div class="row">
       <div class="col">

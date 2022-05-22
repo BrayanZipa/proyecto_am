@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Admin} from './Admin';
+import { Admin2 } from './Admin2'; 
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,11 @@ export class CrudService {
 
   API: string='http://localhost/desarrolloWeb/angular/'
   constructor(private clienteHttp: HttpClient) { 
-  }  
+  }
+  
+  InicioSesionAdmin(datosAministrador:Admin2):Observable<any> {
+    return this.clienteHttp.post(this.API+"?admin", datosAministrador);
+  }
 
   InicioSesionEstudiante(datosEstudiante:Admin):Observable<any> {
     return this.clienteHttp.post(this.API+"?buscar2", datosEstudiante);

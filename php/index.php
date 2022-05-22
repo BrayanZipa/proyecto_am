@@ -116,7 +116,6 @@ if ( isset ( $_GET [ "buscar2" ])){
     else {   echo  json_encode ([ "success" => 0 ]); exit();}
 }
 
-
 // Consulta todos los registros de la tabla de estudiantes
 $consulta = mysqli_query ( $conexionBD , "SELECT * FROM estudiantes" );
 if ( mysqli_num_rows ( $consulta ) > 0 ){
