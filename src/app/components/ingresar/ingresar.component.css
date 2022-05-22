@@ -1,14 +1,16 @@
+
+div.title{
+    text-align: center;
+    padding: 30px;
+}
 div.container{
     margin-top: 7%;
-    padding: 30px;
-    width: 45%;
     border-radius: 10px;
+    width: 55%;
     border: 1px solid rgba(95, 95, 95, 0.212);
 }
-div.title{
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
+img{
+    width: 40%;
 }
 
 div[class="mb-3"]{
