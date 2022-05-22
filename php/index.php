@@ -27,7 +27,7 @@ if ( isset ( $_GET [ "consultar" ])){
         echo  json_encode ( $estudiante );
         exit();
     }
-    else {   echo  json_encode ([ "success" => 0 ]); }
+    else { echo  json_encode ([ "success" => 0 ]); }
 }
 
 //Borrar pero se le debe enviar una clave (para borrar)
@@ -71,17 +71,17 @@ if ( isset ( $_GET [ "actualizar" ])){
     $datos = json_decode ( file_get_contents ( "php://input" ));
 
     $idEstudiante = ( isset ( $datos -> id )) ? $datos -> id : $_GET [ "actualizar" ];
-    $nombre = $datos -> nombre ;
-    $apellidos  =$datos -> apellidos ; 
-    $sexo = $datos -> sexo ; 
-    $tipoDocumento = $datos -> tipoDocumento ; 
-    $edad = $datos -> edad ; 
-    $numeroDocumento = $datos -> numeroDocumento ; 
-    $direccion = $datos -> direccion ; 
-    $telefono = $datos -> telefono ; 
-    $correo = $datos -> correo ; 
-    $carrera = $datos -> carrera ; 
-    $jornada = $datos -> jornada ; 
+    $nombre = $datos -> nombre;
+    $apellidos  =$datos -> apellidos; 
+    $sexo = $datos -> sexo; 
+    $tipoDocumento = $datos -> tipoDocumento; 
+    $edad = $datos -> edad; 
+    $numeroDocumento = $datos -> numeroDocumento; 
+    $direccion = $datos -> direccion; 
+    $telefono = $datos -> telefono; 
+    $correo = $datos -> correo; 
+    $carrera = $datos -> carrera; 
+    $jornada = $datos -> jornada; 
     
     $consulta = mysqli_query ( $conexionBD , "UPDATE estudiantes SET nombre='$nombre',apellidos='$apellidos',sexo='$sexo',tipoDocumento='$tipoDocumento',
     edad='$edad',numeroDocumento='$numeroDocumento',direccion='$direccion',telefono='$telefono',correo='$correo',carrera='$carrera',jornada='$jornada' WHERE idEstudiante ='$idEstudiante'" );
@@ -101,16 +101,31 @@ if ( isset ( $_GET [ "buscar" ])){
     else {   echo  json_encode ([ "success" => 0 ]); exit();}
 }
 
-// Actualiza los datos de un registro mediante una clave
+// Consultar un estudiante por medio de su correo electrónico y su documento de identidad
 if ( isset ( $_GET [ "buscar2" ])){
     $datos = json_decode ( file_get_contents ( "php://input" ));
-    $numeroDocumento = $datos -> numeroDocumento ; 
-    $correo = $datos -> correo ; 
+    $numeroDocumento = $datos -> numeroDocumento; 
+    $correo = $datos -> correo; 
 
     $consulta = mysqli_query ( $conexionBD , "SELECT * FROM estudiantes WHERE numeroDocumento='$numeroDocumento' AND correo='$correo'");
     if ( mysqli_num_rows ( $consulta ) > 0 ){
         $estudiante = mysqli_fetch_all ( $consulta , MYSQLI_ASSOC ); 
         echo  json_encode ( $estudiante );
+        exit();
+    }
+    else {   echo  json_encode ([ "success" => 0 ]); exit();}
+}
+
+// Consultar un administrador por medio de su correo electrónico y una clave
+if ( isset ( $_GET [ "admin" ])){
+    $datos = json_decode ( file_get_contents ( "php://input" ));
+    $correo = $datos -> correo; 
+    $clave = $datos -> clave; 
+
+    $consulta = mysqli_query ( $conexionBD , "SELECT * FROM administradores WHERE correo='$correo' AND clave='$clave'");
+    if ( mysqli_num_rows ( $consulta ) > 0 ){
+        $administrador = mysqli_fetch_all ( $consulta , MYSQLI_ASSOC ); 
+        echo  json_encode ( $administrador );
         exit();
     }
     else {   echo  json_encode ([ "success" => 0 ]); exit();}
