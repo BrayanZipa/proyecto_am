@@ -7,6 +7,7 @@ import { RegistrarseComponent } from './components/registrarse/registrarse.compo
 import { ModificarComponent } from './components/vistaAdministrador/modificar/modificar.component';
 import { RegistrarComponent } from './components/vistaAdministrador/registrar/registrar.component';
 import { ActualizarComponent } from './components/vistaAdministrador/actualizar/actualizar.component';
+import { ConsultarComponent } from './components/vistaEstudiante/consultar/consultar.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
 
   {path: 'admin/ingresar', component: RegistrarComponent},
   {path: 'admin/consultar', component: ModificarComponent},
-  {path: 'admin/actualizar/:id', component: ActualizarComponent}
+  {path: 'admin/actualizar/:id', component: ActualizarComponent},
+  {path: 'estudiante/consultar', component: ConsultarComponent}
 ];
 
 @NgModule({
