@@ -1,117 +1,118 @@
 <app-menu-administrador></app-menu-administrador>
 
 <div class="container boder-solid">
-  <!-- <div class="logo text-center">
+  <div class="logo">
     <img src="https://www.kawak.com.co/uniagustiniana/images/datos_empresa/Logo_320_x_132-02.png" alt="">
-  </div> -->
+  </div>
   <div class="title">
-    <label>Actualizar información del estudiante</label>
+    <h5 class="card-title text-center">Actualizar información del estudiante</h5>
   </div>
 
   <form ngNativeValidate [formGroup]="formularioActualizar" (ngSubmit)="enviardatos()">
-    
-    <div class="row">
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="nombre" class="formulario form-control" id="nombre" placeholder="Nombres" required="">
-          <label for="nombre">Nombres</label>
+    <div id="card" class="card text-white bg-dark fluid" style="max-width:200rem;">  
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="nombre" class="formulario form-control" id="nombre" placeholder="Nombres" required="">
+            <label for="nombre">Nombres</label>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="apellidos" class="formulario form-control" id="apellido" placeholder="Apellidos" required="">
-          <label for="apellido">Apellidos</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="mb-3">
-          <div class="form-floating">
-            <select class="formulario form-select" formControlName="tipoDocumento" id="tipo" required="">
-              <option disabled selected>Selecciona una opción</option>
-              <option value="C.C.">C.C.</option>
-              <option value="T.I.">T.I.</option>
-            </select>
-            <label for="tipo">Tipo de documento</label>
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="apellidos" class="formulario form-control" id="apellido" placeholder="Apellidos" required="">
+            <label for="apellido">Apellidos</label>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="numeroDocumento" class="formulario form-control" id="documento" placeholder="Número de documento" required="">
-          <label for="documento">Número de documento</label>
-        </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="edad" class="formulario form-control" id="edad" placeholder="Edad" required="">
-          <label for="edad">Edad</label>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <div class="form-floating">
+              <select class="formulario form-select" formControlName="tipoDocumento" id="tipo" required="">
+                <option disabled selected>Selecciona una opción</option>
+                <option value="C.C.">C.C.</option>
+                <option value="T.I.">T.I.</option>
+              </select>
+              <label for="tipo">Tipo de documento</label>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <div class="form-floating">
-            <select class="formulario form-select" formControlName="sexo" id="genero" required="">
-              <option disabled selected>Seleccione una opción</option>
-              <option value="Femenino">Femenino</option>
-              <option value="Masculino">Masculino</option>
-              <option value="Otro">Otro</option>
-            </select>
-            <label for="genero">Género</label>
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="numeroDocumento" class="formulario form-control" id="documento" placeholder="Número de documento" required="">
+            <label for="documento">Número de documento</label>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="direccion" class="formulario form-control" id="direccion" placeholder="Dirección" required="">
-          <label for="direccion">Dirección</label>
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="edad" class="formulario form-control" id="edad" placeholder="Edad" required="">
+            <label for="edad">Edad</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <div class="form-floating">
+              <select class="formulario form-select" formControlName="sexo" id="genero" required="">
+                <option disabled selected>Seleccione una opción</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <label for="genero">Género</label>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="telefono" class="formulario form-control" id="telefono" placeholder="Teléfono" required="">
-          <label for="telefono">Teléfono</label>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="direccion" class="formulario form-control" id="direccion" placeholder="Dirección" required="">
+            <label for="direccion">Dirección</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="telefono" class="formulario form-control" id="telefono" placeholder="Teléfono" required="">
+            <label for="telefono">Teléfono</label>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="correo" class="formulario form-control" id="correo" placeholder="Email" required="">
-          <label for="correo">Email</label>
+      <div class="row">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="correo" class="formulario form-control" id="correo" placeholder="Email" required="">
+            <label for="correo">Email</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" formControlName="carrera" class="formulario form-control" id="carrera" placeholder="Carrera" required="">
+            <label for="carrera">Carrera</label>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" formControlName="carrera" class="formulario form-control" id="carrera" placeholder="Carrera" required="">
-          <label for="carrera">Carrera</label>
+
+      <div class="mb-3">
+        <div class="form-floating">
+          <select class="formulario form-select" formControlName="jornada" id="jornada" required="">
+            <option disabled selected>Seleccione una opción</option>
+            <option value="Diurna">Diurna</option>
+            <option value="Nocturna">Nocturna</option>
+          </select>
+          <label for="jornada">Jornada</label>
         </div>
       </div>
-    </div>
 
-    <div class="mb-3">
-      <div class="form-floating">
-        <select class="formulario form-select" formControlName="jornada" id="jornada" required="">
-          <option disabled selected>Seleccione una opción</option>
-          <option value="Diurna">Diurna</option>
-          <option value="Nocturna">Nocturna</option>
-        </select>
-        <label for="jornada">Jornada</label>
+      <div class="mb-3 text-center">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <button type="button" class="btn btn-secondary" routerLink="/admin/modificar">Cancelar</button>
       </div>
-    </div>
-
-    <div class="mb-3 text-center">
-      <button type="submit" class="btn btn-primary">Actualizar</button>
-      <button type="button" class="btn btn-secondary" routerLink="/admin/modificar">Cancelar</button>
     </div>
   </form>
 
