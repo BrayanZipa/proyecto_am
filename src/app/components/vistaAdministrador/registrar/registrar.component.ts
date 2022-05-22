@@ -40,9 +40,8 @@ export class RegistrarComponent implements OnInit {
   
   enviardatos():any{
     this.crudService.Registrar(this.formularioadmin.value).subscribe(res=>{
-      
+      this.ruteador.navigateByUrl('/admin/consultar');
     });
-    this.ruteador.navigateByUrl('/admin/consultar');
   }
 
 }

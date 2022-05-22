@@ -16,7 +16,6 @@ export class ModificarComponent implements OnInit {
 
   ngOnInit(): void {
     this.crudService.MostrarEstudiantes().subscribe(res=>{
-      console.log(res);
       this.estudiantes = res;
     });
   }

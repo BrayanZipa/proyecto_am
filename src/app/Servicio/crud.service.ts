@@ -18,7 +18,7 @@ export class CrudService {
   }
 
   MostrarEstudiantes(){
-    return this.clienteHttp.get(this.API, {responseType: 'text'});
+    return this.clienteHttp.get(this.API);
   }
 
   BorrarEmpleado(id:any):Observable<any>{
