@@ -15,6 +15,7 @@ import { ModificarComponent } from './components/vistaAdministrador/modificar/mo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ActualizarComponent } from './components/vistaAdministrador/actualizar/actualizar.component';
+import { ConsultarComponent } from './components/vistaEstudiante/consultar/consultar.component';
 
 
 
@@ -30,6 +31,7 @@ import { ActualizarComponent } from './components/vistaAdministrador/actualizar/
     RegistrarComponent,
     ModificarComponent,
     ActualizarComponent,
+    ConsultarComponent,
   ],
   imports: [
     BrowserModule,
