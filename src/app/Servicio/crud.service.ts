@@ -18,6 +18,18 @@ export class CrudService {
   }
 
   MostrarEstudiantes(){
-    return this.clienteHttp.get(this.API);
+    return this.clienteHttp.get(this.API, {responseType: 'text'});
+  }
+
+  BorrarEmpleado(id:any):Observable<any>{
+    return this.clienteHttp.get(this.API+"?borrar="+id);
+  }
+
+  ObtenerEstudiante(id:any):Observable<any>{
+    return this.clienteHttp.get(this.API+"?consultar="+id);
+  }
+
+  ActualizarEstudiante(id:any, datosEstudiante:Admin):Observable<any> {
+    return this.clienteHttp.post(this.API+"?actualizar="+id, datosEstudiante);
   }
 }

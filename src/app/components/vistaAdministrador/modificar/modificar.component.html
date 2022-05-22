@@ -29,7 +29,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let estudiante of estudiantes; let id=index">
+                                <tr *ngFor="let estudiante of estudiantes; let iControl=index">
                                     <th scope="row">{{ estudiante.idEstudiante }}</th>
                                     <td>{{ estudiante.nombre }}</td>
                                     <td>{{ estudiante.apellidos }}</td>
@@ -44,8 +44,8 @@
                                     <td>{{ estudiante.jornada }}</td>
                                     <td>
                                         <div class="text-center">
-                                            <a class="btn btn-primary" href="admin/actualizar/1"><i class="fa-solid fa-pen-to-square"></i></a>
-                                            <a class="btn btn-danger ms-2" href=""><i class="fa-solid fa-trash-can"></i></a>
+                                            <a class="btn btn-primary" routerLink="admin/actualizar/{{ estudiante.idEstudiante }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a class="btn btn-danger ms-2" href="" (click)="borrarRegistro(estudiante.idEstudiante, iControl)"><i class="fa-solid fa-trash-can"></i></a>
                                         </div>
                                     </td>     
                                 </tr>
@@ -57,3 +57,5 @@
         </div>
     </div>
 </div>
+
+{{ estudiantes }}

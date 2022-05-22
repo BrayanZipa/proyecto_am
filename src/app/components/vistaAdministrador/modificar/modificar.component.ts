@@ -21,4 +21,11 @@ export class ModificarComponent implements OnInit {
     });
   }
 
+  borrarRegistro(id:any, icontrol:any){
+    if (window.confirm("¿Desea eliminar el registro?")) {
+      this.crudService.BorrarEmpleado(id).subscribe((res)=>{
+        this.estudiantes.splice(icontrol, 1);
+      });
+    }
+  }
 }

@@ -8,7 +8,7 @@
     <label>Registro de estudiante</label>
   </div>
 
-  <form [formGroup]="formularioadmin" (ngSubmit)="enviardatos()">
+  <form ngNativeValidate [formGroup]="formularioadmin" (ngSubmit)="enviardatos()">
 
     <div class="row">
       <div class="col">
