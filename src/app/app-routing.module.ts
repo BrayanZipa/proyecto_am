@@ -17,7 +17,6 @@ const routes: Routes = [
   {path: 'admin/ingresar', component: RegistrarComponent},
   {path: 'admin/consultar', component: ModificarComponent},
   {path: 'admin/actualizar/:id', component: ActualizarComponent}
-  // {path: 'admin/eliminar', component: EliminarComponent}
 ];
 
 @NgModule({

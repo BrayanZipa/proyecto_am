@@ -35,6 +35,7 @@ export class ActualizarComponent implements OnInit {
         jornada:res[0]['jornada'],
       });
     });
+    
     this.formularioActualizar=this.formulario.group({
       nombre:[''],
       apellidos:[''],
