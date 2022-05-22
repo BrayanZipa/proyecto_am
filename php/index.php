@@ -83,7 +83,7 @@ if ( isset ( $_GET [ "actualizar" ])){
     $carrera = $datos -> carrera ; 
     $jornada = $datos -> jornada ; 
     
-    $consulta = mysqli_query ( $conexionBD , "UPDATE AngularPF SET nombre='$nombre',apellidos='$apellidos',sexo='$sexo',tipoDocumento='$tipoDocumento',
+    $consulta = mysqli_query ( $conexionBD , "UPDATE estudiantes SET nombre='$nombre',apellidos='$apellidos',sexo='$sexo',tipoDocumento='$tipoDocumento',
     edad='$edad',numeroDocumento='$numeroDocumento',direccion='$direccion',telefono='$telefono',correo='$correo',carrera='$carrera',jornada='$jornada' WHERE idEstudiante ='$idEstudiante'" );
     echo  json_encode ([ "success" => 1 ]);
     exit();
