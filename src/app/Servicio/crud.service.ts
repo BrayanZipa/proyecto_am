@@ -30,7 +30,7 @@ export class CrudService {
     return this.clienteHttp.get(this.API);
   }
 
-  BorrarEmpleado(id:any):Observable<any>{
+  BorrarEstudiante(id:any):Observable<any>{
     return this.clienteHttp.get(this.API+"?borrar="+id);
   }
 
@@ -40,6 +40,10 @@ export class CrudService {
 
   ActualizarEstudiante(id:any, datosEstudiante:Admin):Observable<any> {
     return this.clienteHttp.post(this.API+"?actualizar="+id, datosEstudiante);
+  }
+
+  BuscarEstudiante(documento:any):Observable<any>{
+    return this.clienteHttp.get(this.API+"?buscar="+documento);
   }
 
 }
