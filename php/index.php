@@ -19,7 +19,7 @@ $conexionBD = new mysqli( $servidor , $usuario , $contrasenia , $nombreBaseDatos
 // echo $conexionBD->host_info."\n";
 
 
-// Consulta datos y recepciona una clave para consultar dichos datos con dicha clave
+// Consultar un estudiante por medio de su id
 if ( isset ( $_GET [ "consultar" ])){
     $consulta = mysqli_query ( $conexionBD , "SELECT * FROM estudiantes WHERE idEstudiante=" . $_GET [ "consultar" ]);
     if ( mysqli_num_rows ( $consulta ) > 0 ){
@@ -88,6 +88,34 @@ if ( isset ( $_GET [ "actualizar" ])){
     echo  json_encode ([ "success" => 1 ]);
     exit();
 }
+
+
+// Consultar un estudiante por medio de su documento de identidad
+if ( isset ( $_GET [ "buscar" ])){
+    $consulta = mysqli_query ( $conexionBD , "SELECT * FROM estudiantes WHERE numeroDocumento=" . $_GET [ "buscar" ]);
+    if ( mysqli_num_rows ( $consulta ) > 0 ){
+        $estudiante= mysqli_fetch_all ( $consulta , MYSQLI_ASSOC );
+        echo  json_encode ( $estudiante );
+        exit();
+    }
+    else {   echo  json_encode ([ "success" => 0 ]); exit();}
+}
+
+// Actualiza los datos de un registro mediante una clave
+if ( isset ( $_GET [ "buscar2" ])){
+    $datos = json_decode ( file_get_contents ( "php://input" ));
+    $numeroDocumento = $datos -> numeroDocumento ; 
+    $correo = $datos -> correo ; 
+
+    $consulta = mysqli_query ( $conexionBD , "SELECT * FROM estudiantes WHERE numeroDocumento='$numeroDocumento' AND correo='$correo'");
+    if ( mysqli_num_rows ( $consulta ) > 0 ){
+        $estudiante = mysqli_fetch_all ( $consulta , MYSQLI_ASSOC ); 
+        echo  json_encode ( $estudiante );
+        exit();
+    }
+    else {   echo  json_encode ([ "success" => 0 ]); exit();}
+}
+
 
 // Consulta todos los registros de la tabla de estudiantes
 $consulta = mysqli_query ( $conexionBD , "SELECT * FROM estudiantes" );

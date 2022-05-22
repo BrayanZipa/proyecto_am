@@ -13,8 +13,12 @@ export class CrudService {
   constructor(private clienteHttp: HttpClient) { 
   }  
 
+  InicioSesionEstudiante(datosEstudiante:Admin):Observable<any> {
+    return this.clienteHttp.post(this.API+"?buscar2", datosEstudiante);
+  }
+
   Registrar(datosEstudiante:Admin):Observable<any> {
-    return this.clienteHttp.post(this.API+"?insertar=1",datosEstudiante);
+    return this.clienteHttp.post(this.API+"?insertar=1", datosEstudiante);
   }
 
   MostrarEstudiantes(){
@@ -32,4 +36,5 @@ export class CrudService {
   ActualizarEstudiante(id:any, datosEstudiante:Admin):Observable<any> {
     return this.clienteHttp.post(this.API+"?actualizar="+id, datosEstudiante);
   }
+
 }

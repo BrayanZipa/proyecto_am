@@ -11,5 +11,4 @@ export class Admin{
     correo!: string;
     carrera!: string;
     jornada!: string;
-
 }

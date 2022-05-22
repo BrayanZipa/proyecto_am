@@ -7,16 +7,18 @@
     <div class="title">
         <h5>Iniciar sesión como estudiante</h5>
     </div>
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Correo electrónico</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Número de documento</label>
-    </div>
-    <div class="mb-3 text-center">
-        <a class="btn btn-primary">Siguiente</a>
-    </div>
+    <form ngNativeValidate [formGroup]="formIngresoEstudiante" (ngSubmit)="inicioSesion()">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" formControlName="correo" placeholder="Correo electrónico" required="">
+            <label for="floatingInput">Correo electrónico</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" formControlName="numeroDocumento"  id="floatingPassword" placeholder="Número de documento" required="">
+            <label for="floatingPassword">Número de documento</label>
+        </div>
+        <div class="mb-3 text-center">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </div>
+    </form>
 </div>
     
